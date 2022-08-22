@@ -4,7 +4,7 @@ const enddate =  document.createElement("p");
 enddate.id = "enddate"
 enddate.innerText = "End date: " + countDownDate.toLocaleString("en-GB", {timeZone: "Asia/Singapore"});
 
-document.getElementById("container").appendChild(enddate);
+document.getElementById("timer-container").appendChild(enddate);
 
 var x = setInterval(function() {
 

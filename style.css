@@ -21,11 +21,14 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 50px;
 }
-div#container {
+div#timer-container {
+    padding-top: 50px;
+}
+div.container {
     margin-left: auto;
     margin-right: auto;
     width: 710px;
     text-align: center;
     /* background: rgb(0, 223, 0); */
-    padding-top: 50px;
+
 }

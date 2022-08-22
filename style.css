@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&family=Fredoka+One&display=swap&family=Varela+Round&display=swap");
+
+#title {
+
+    display: block;
+    color: rgb(0, 0, 0);
+    /* background-color: aliceblue; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#enddate {
+    font-size: large;
+}
+
+.timer {
+    color: rgb(223, 0, 197);
+}
+.timer, #title {
+    margin: 0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 50px;
+}
+div#container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 710px;
+    text-align: center;
+    /* background: rgb(0, 223, 0); */
+    padding-top: 50px;
+}

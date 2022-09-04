@@ -13,21 +13,23 @@ var x = setInterval(function() {
 
     // Find the distance between now and the count down date
     var distance = countDownDate.getTime() - now;
-
+    const minute = 1000 * 60
+    const year = minute * 60 * 24 * 365.2425
     // Time calculations for days, hours, minutes and seconds
-    var years = Math.floor(distance / (1000 * 60 * 60 * 24 * 365.2425));
-    var days = Math.floor(distance % (1000 * 60 * 60 * 24  * 365.2425) / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    var cycles = Math.floor(distance / (1000 * 60 * 60 * 24 * 365.2425 * 5));
+    var years = Math.floor(distance / (year));
+    var days = Math.floor(distance % (year) / (minute * 60 * 24));
+    var hours = Math.floor((distance % (minute * 60 * 24)) / (minute * 60));
+    var minutes = Math.floor((distance % (minute * 60)) / (minute));
+    var seconds = Math.floor((distance % (minute)) / 1000);
+    var ge = Math.floor((distance + 4 * year) / (year * 5));
+    var upr = Math.floor((distance + 5 * year) / (year * 5));
 
     // Display the result in the element with id="demo"
     document.getElementById("year-day").innerHTML = years + " years " + days + " days";
     document.getElementById("hour-minute-seconds").innerHTML = hours + " hours "
     + minutes + " minutes " + seconds + " seconds ";
-    document.getElementById("UPR").innerHTML = cycles + " Univeral Periodic Reviews";
-    document.getElementById("GE").innerHTML = cycles + " General Elections";
+    document.getElementById("UPR").innerHTML = upr + " Univeral Periodic Reviews";
+    document.getElementById("GE").innerHTML = ge + " General Elections";
 
     // If the count down is finished, write some text
     if (distance < 0) {
